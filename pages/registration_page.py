@@ -8,7 +8,7 @@ class RegistrationPage:
     failed_login_form = 'p.modal__text'
 
     def open_page(self):
-        browser.open('/')
+        browser.open('/about/loyalty')
         return self
 
     def enter_card_number(self, card_number):
