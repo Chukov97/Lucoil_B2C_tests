@@ -17,7 +17,7 @@ class Config(BaseSettings):
     context: Literal['stage', 'local'] = 'local'
     environment: Literal['remote', 'local'] = 'local'
 
-    base_url: str = 'https://customer.licard.ru'
+    base_url: str = 'https://www.citilink.ru'
     driver_name: str = 'chrome'
     load_strategy: str = 'eager'
     window_width: int = 1920

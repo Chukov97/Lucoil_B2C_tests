@@ -2,5 +2,5 @@ from pydantic import BaseModel
 
 
 class LoginData(BaseModel):
-    card_number: str
+    login: str
     password: str

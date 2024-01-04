@@ -2,7 +2,7 @@ import time
 
 import allure
 from pages.registration_page import registration_page
-from test_data.card_data import VALID_CARD
+from test_data.card_data import VALID_CREDENTIALS
 from pages.main_page import main_page
 from pages.base_page import base_page
 from test_data.enums.card_level import CardLevel
@@ -15,9 +15,9 @@ class TestMainPage:
         with allure.step("Open login page"):
             registration_page.open_page()
         with allure.step("Entering the card number"):
-            registration_page.enter_card_number(VALID_CARD.card_number)
+            registration_page.enter_card_number(VALID_CREDENTIALS.login)
         with allure.step("Entering the password"):
-            registration_page.enter_password(VALID_CARD.password)
+            registration_page.enter_password(VALID_CREDENTIALS.password)
             time.sleep(3)
         with allure.step("Click login button"):
             registration_page.click_login_button()
@@ -31,13 +31,13 @@ class TestMainPage:
         with allure.step("Open login page"):
             registration_page.open_page()
         with allure.step("Entering the card number"):
-            registration_page.enter_card_number(VALID_CARD.card_number)
+            registration_page.enter_card_number(VALID_CREDENTIALS.login)
         with allure.step("Entering the password"):
-            registration_page.enter_password(VALID_CARD.password)
+            registration_page.enter_password(VALID_CREDENTIALS.password)
             time.sleep(3)
         with allure.step("Click login button"):
             registration_page.click_login_button()
             card_number = main_page.get_card_number()
         with allure.step("Card number check"):
-            base_page.assert_equals(VALID_CARD.card_number, card_number,
-                                    f'Номер карты - {card_number}, а должен быть {VALID_CARD.card_number}')
+            base_page.assert_equals(VALID_CREDENTIALS.login, card_number,
+                                    f'Номер карты - {card_number}, а должен быть {VALID_CREDENTIALS.login}')
