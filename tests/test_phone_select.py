@@ -8,10 +8,10 @@ from pages.all_smartphone_page import all_smartphone_page
 from pages.smartphone_page import smartphone_page
 
 
-class TestLogin:
+class TestPhoneSelect:
 
-    @allure.title("Successful login")
-    def test_login_valid_card(self, browser_management):
+    @allure.title("Check phone price")
+    def test_check_phone_price(self, browser_management):
         with allure.step("Open main page"):
             main_page.open_page()
         with allure.step("Open smartphone page"):
