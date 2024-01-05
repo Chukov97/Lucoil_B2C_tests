@@ -5,7 +5,7 @@ VALID_CREDENTIALS = LoginData(
     password='Citilink2024!'
 )
 
-INVALID_CARD = LoginData(
+INVALID_CREDENTIALS = LoginData(
     login='59022024220',
     password='LicArd2020!'
 )

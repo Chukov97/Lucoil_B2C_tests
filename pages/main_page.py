@@ -1,17 +1,15 @@
-from selene import browser, be
+from selene import browser, query
 
-
-# vojoh86370@watrf.com
-# Citilink2024!
 
 class MainPage:
     cart = 'div[data-meta-name="BasketButton"][data-meta-count="0"]'
-    # login = 'div[data-meta-name="UserButtonContainer"]'
     login = '#__next > div > div.css-bo8bch.e1s351fz0 > div > div.css-1l8w4nq.es4sr930 > div > div > div.e1r0p2ss0.css-cvzj2n.e1loosed0 > div.css-1cs774w.e10bp8150 > div.css-1vb2hqj.e38q5fc0'
     smartphone = 'a[href="/catalog/smartfony/"]'
     login_form = 'input[name="login"]'
     password_form = 'input[name="pass"]'
     login_button = 'button.e4uhfkv0.css-ajbuym.e4mggex0'
+    user_name = 'span.en3k2720.e106ikdt0.css-1rzz8dw.e1gjr6xo0[color="None"]'
+    failed_login = '.LoginPageLayout__error-message'
 
     def open_page(self):
         browser.open('/')
@@ -34,6 +32,12 @@ class MainPage:
 
     def click_login_button(self):
         browser.element(self.login_button).click()
+
+    def get_user_name(self):
+        return browser.element(self.user_name).get(query.text)
+
+    def get_failed_login_massage(self):
+        return browser.element(self.failed_login).get(query.text)
 
 
 main_page = MainPage()

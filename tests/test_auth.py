@@ -1,7 +1,5 @@
-import time
-from selene import browser, be
 import allure
-from test_data.card_data import VALID_CREDENTIALS, INVALID_CARD
+from test_data.user_data import VALID_CREDENTIALS, INVALID_CREDENTIALS
 from pages.base_page import base_page
 from pages.main_page import main_page
 
@@ -9,7 +7,7 @@ from pages.main_page import main_page
 class TestLogin:
 
     @allure.title("Successful login")
-    def test_login_valid_card(self, browser_management):
+    def test_login_valid_credentials(self, browser_management):
         with allure.step("Open main page"):
             main_page.open_page()
         with allure.step("Open login form"):
@@ -18,24 +16,27 @@ class TestLogin:
             main_page.enter_login(VALID_CREDENTIALS.login)
         with allure.step("Entering the password"):
             main_page.enter_password(VALID_CREDENTIALS.password)
-            time.sleep(3)
         with allure.step("Click login button"):
             main_page.click_login_button()
-        # with allure.step("Сhecking the test on the page"):
-        #     base_page.should_have_correct_text(element_selector=main_page.main_title,
-        #                                        expected_text='Добрый день')
+        with allure.step("Getting user name"):
+            user_name = main_page.get_user_name()
+        with allure.step("Сheck user name"):
+            base_page.assert_equals('тест', user_name, f'Имя пользователя {user_name}, а должно быть тест')
 
     @allure.title("Failed login")
-    def test_login_invalid_card(self, browser_management):
-        with allure.step("Open login page"):
-            registration_page.open_page()
+    def test_login_invalid_credentials(self, browser_management):
+        with allure.step("Open main page"):
+            main_page.open_page()
+        with allure.step("Open login form"):
+            main_page.click_login()
         with allure.step("Entering the card number"):
-            registration_page.enter_card_number(INVALID_CARD.login)
+            main_page.enter_login(INVALID_CREDENTIALS.login)
         with allure.step("Entering the password"):
-            registration_page.enter_password(INVALID_CARD.password)
-            time.sleep(3)
+            main_page.enter_password(INVALID_CREDENTIALS.password)
         with allure.step("Click login button"):
-            registration_page.click_login_button()
-        with allure.step("Сhecking the test on the page"):
-            base_page.should_have_correct_text(element_selector=registration_page.failed_login_form,
-                                               expected_text='Номер карты или пароль введены неверно')
+            main_page.click_login_button()
+        with allure.step("Get failed login massage"):
+            failed_login_massage = main_page.get_failed_login_massage()
+        with allure.step("Сheck failed login massage"):
+            base_page.assert_equals('Неверный логин или пароль', failed_login_massage,
+                                    f'Сообщение равно {failed_login_massage}, а должно быть "Неверный логин или пароль"')

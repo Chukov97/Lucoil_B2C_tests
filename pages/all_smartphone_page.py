@@ -1,8 +1,5 @@
-from selene import browser, be
+from selene import browser
 
-
-# vojoh86370@watrf.com
-# Citilink2024!
 
 class AllSmartphonePage:
     phone = 'a[title="Смартфон Huawei P60 Pro 8/256Gb,  MNA-LX9,  черный"]'
