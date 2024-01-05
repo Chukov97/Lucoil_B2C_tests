@@ -9,4 +9,5 @@
 ## Проект реализован с использованием
 Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure TestOps Telegram Jira
 
-![This is an image](/design/pytest-original.svg =40x40)![This is an image](/design/python-original.svg =40x40)
+<img src="/design/pytest-original.svg" alt="Image 1" width="40" height="40">
+<img src="/design/python-original.svg" alt="Image 2" width="40" height="40">
