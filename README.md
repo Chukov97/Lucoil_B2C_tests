@@ -6,7 +6,9 @@
 - [x] Провека корректности данных товаров
 - [x] Добавление и удаление товара из корзины
 
-## Проект реализован с использованием
+### Структура проекта
+
+### Проект реализован с использованием
 Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram 
 
 <img src="/design/python-original.svg" alt="Image 1" width="45" height="45"><img src="/design/pytest-original.svg" alt="Image 2" width="45" height="45"><img src="/design/PyCharm_Icon.svg" alt="Image 3" width="45" height="45"><img src="/design/selenoid.png" alt="Image 4" width="45" height="45"><img src="/design/jenkins-original.svg" alt="Image 5" width="45" height="45">
@@ -27,7 +29,7 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 
 ![This is an image](/design/screens/allure_report.png)
 
-## Локальный запуск автотестов
+### Локальный запуск автотестов
 1. Клонируйте репозиторий на свой локальный компьютер при помощи git clone
 2. Создайте и активируйте виртуальное окружение
   ```bash
@@ -52,5 +54,9 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 allure serve allure-results
 ``` 
 
+### Пример видеозаписи прохождения теста
+![This is an image](/design/screens/test_gif.gif)
 
+### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
+![This is an image](/design/screens/bot.png)
 
