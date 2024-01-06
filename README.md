@@ -11,3 +11,18 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 
 <img src="/design/python-original.svg" alt="Image 1" width="45" height="45"><img src="/design/pytest-original.svg" alt="Image 2" width="45" height="45"><img src="/design/PyCharm_Icon.svg" alt="Image 3" width="45" height="45"><img src="/design/selenoid.png" alt="Image 4" width="45" height="45"><img src="/design/jenkins-original.svg" alt="Image 5" width="45" height="45">
 <img src="/design/allure.png" alt="Image 6" width="45" height="45"><img src="/design/telegram.svg" alt="Image 7" width="45" height="45">
+
+# Запуск автотестов выполняется на сервере Jenkins
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/C09_Chukov_Ilya_15_unit/">Ссылка на проект в Jenkins</a>
+
+### Для запуска автотестов в Jenkins
+#### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C09_Chukov_Ilya_15_unit/">проект</a>
+
+![This is an image](/design/scrins/Jenkins_main.png)
+
+#### 2. Выбрать пункт **Собрать с параметрами**
+#### 3. В случае необходимости изменить параметры, выбрав значения из выпадающих списков
+#### 4. Нажать **Собрать**
+#### 5. Результат запуска сборки можно посмотреть в отчёте Allure
+
+![This is an image](/design/scrins/allure_report.png)
