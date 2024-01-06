@@ -38,7 +38,7 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
    ```bash
    pip install -r requirements.txt
    ```
-5. Для запусков тестов локально используйте команду 
+4. Для запусков тестов локально используйте команду 
   ```bash
   pytest -sv
   ```
@@ -47,9 +47,10 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
   environment='remote' pytest -sv
   ```
 
-Получение отчёта:
+Получение отчёта allure:
 ```bash
-allure serve build/allure-results
+allure serve allure-results
+``` 
 
 
 
