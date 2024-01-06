@@ -36,9 +36,9 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
   ```
 3. Установите зависимости с помощью pip
      ```bash
-  pip install -r requirements.txt
-  ```
-4. Для запусков тестов локально используйте команду 
+   pip install -r requirements.txt
+   ```
+5. Для запусков тестов локально используйте команду 
   ```bash
   pytest -sv
   ```
@@ -50,3 +50,6 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 Получение отчёта:
 ```bash
 allure serve build/allure-results
+
+
+
