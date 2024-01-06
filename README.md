@@ -26,3 +26,27 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 #### 5. Результат запуска сборки можно посмотреть в отчёте Allure
 
 ![This is an image](/design/scrins/allure_report.png)
+
+## Локальный запуск автотестов
+1. Клонируйте репозиторий на свой локальный компьютер при помощи git clone
+2. Создайте и активируйте виртуальное окружение
+  ```bash
+  python -m venv .venv
+  source .venv/bin/activate
+  ```
+3. Установите зависимости с помощью pip
+     ```bash
+  pip install -r requirements.txt
+  ```
+4. Для запусков тестов локально используйте команду 
+  ```bash
+  pytest -sv
+  ```
+5. Для запусков тестов удаленно используйте команду 
+  ```bash
+  environment='remote' pytest -sv
+  ```
+
+Получение отчёта:
+```bash
+allure serve build/allure-results
