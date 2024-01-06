@@ -35,7 +35,7 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
   source .venv/bin/activate
   ```
 3. Установите зависимости с помощью pip
-     ```bash
+   ```bash
    pip install -r requirements.txt
    ```
 5. Для запусков тестов локально используйте команду 
